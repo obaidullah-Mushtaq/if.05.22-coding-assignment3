@@ -31,9 +31,9 @@ PROLOG now allows to query for all ancestors of a given name. If we try, e.g., `
 
 ### Lists
 #### Basics
-A list in PROLOG is started and ended by typing square brackets ([a, b, c]), very similar to lists in JavaScript. Contrary to JavaScript there is no access via indices available in PROLOG, which would not make very much sense consicering the absence of an iterator statement like `for` or `while`.
+A list in PROLOG is started and ended by typing square brackets ([a, b, c]), very similar to lists in JavaScript. Contrary to JavaScript there is no access via indices available in PROLOG, which would not make very much sense considering the absence of an iterator statement like `for` or `while`.
 
-The recursive structure of PROLOG much more suggests to think of loops in terms of their first element and the rest of the list. In PROLOG terminology we talk about the *Head* and the *Tail* of a list.
+The recursive nature of PROLOG much more suggests to think of loops in terms of their first element and the rest of the list. In PROLOG terminology we talk about the *Head* and the *Tail* of a list.
 
 Consider the list `X = [a, b, c, d, e, f]`, the Head of `X` is the element `a` and the tail of `X`is `[b, c, d, e, f]`. Try to figure out what the head and the rest of such a small list like `[a]` could be.
 
@@ -55,9 +55,9 @@ Now we can apply our new knowledge about recursion and lists to create some new 
 - An element `Head` is element of a list if `Head` is the head of the list.
 
 The recursive part is then
-- An element `X` is not the head of the list then it must be a member of the tail.
+- If an element `X` is not the head of the list then it must be a member of the tail.
 
-In prolog this look like:
+In PROLOG this look like:
 ```
 isMember(X, [X | _]).                        
 isMember(X, [_ | Tail]) :- isMember(X, Tail).

@@ -15,6 +15,7 @@ The goal of this assignment is to train recursion and lists in PROLOG.
 
 ## Hints
 - `addElement/3` works very similar to `concatenate/3` as given in the tutorial [RecursionAndLists](RecursionAndLists.md).
+- `hasLength/2` needs the built-in PROLOG predicate `is/2`. `N is X + 1` is true if `N` has the value of `X + 1` and is false otherwise.
 - One can think about `remove/3` as we thought about `isMember` in the [tutorial](RecursionAndLists.md):
    - If `E` is the head of `L` then the result is the tail of `L`.
    - If `E` is in the tail of `L` we must remove `E` from the tail of `L`.

@@ -14,7 +14,7 @@ parent(pat, jacob).
 parent(carol, jacob).
 ```
 
-Now we want to express the relation `ancestor/2` which says that `X` is an ancestor of `Z`if `X` is a parent, a grandparent, a grand-grandparent, etc. of `Z`.
+Now we want to express the relation `ancestor/2` which says that `X` is an ancestor of `Z` if `X` is a parent, a grandparent, a grand-grandparent, etc. of `Z`.
 
 Since we have no loops available in PROLOG, we have to find another way to express such a relation. So we think of the notion of *ancestor* in terms of *ancestor* itself in the following way:
 `X` is an ancestor of `Z` if
@@ -35,7 +35,7 @@ A list in PROLOG is started and ended by typing square brackets ([a, b, c]), ver
 
 The recursive nature of PROLOG much more suggests to think of loops in terms of their first element and the rest of the list. In PROLOG terminology we talk about the *Head* and the *Tail* of a list.
 
-Consider the list `X = [a, b, c, d, e, f]`, the Head of `X` is the element `a` and the tail of `X`is `[b, c, d, e, f]`. Try to figure out what the head and the rest of such a small list like `[a]` could be.
+Consider the list `X = [a, b, c, d, e, f]`, the Head of `X` is the element `a` and the tail of `X` is `[b, c, d, e, f]`. Try to figure out what the head and the rest of such a small list like `[a]` could be.
 
 #### Heads and Tails in PROLOG
 In PROLOG we can write heads and tails as follows: `[X | Y]`, where `X` is the head and `Y` is the tail of the list. The pipe symbol is the explicit separator between head and tail. To make it more clear, we define two predicates `head/2` and `tail/2`:
